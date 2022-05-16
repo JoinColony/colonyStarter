@@ -1,0 +1,25 @@
+{
+  "name": "colonystarter",
+  "version": "1.0.0",
+  "description": "A simple app around the Colony SDK",
+  "main": "dist/index.js",
+  "scripts": {
+    "serve": "esbuild --bundle src/index.js --servedir=src",
+    "build": "esbuild --bundle src/index.js --minify --outfile=dist/index.js && cpy --flat src/index.html dist"
+  },
+  "keywords": [
+    "colony",
+    "blockchain",
+    "web3"
+  ],
+  "author": "Christian Maniewski <chris@colony.io>",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "cpy-cli": "^4.1.0",
+    "esbuild": "^0.14.39"
+  },
+  "dependencies": {
+    "@colony/sdk": "^0.2.0",
+    "ethers": "^5.6.6"
+  }
+}
