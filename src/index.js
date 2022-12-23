@@ -12,7 +12,7 @@ const start = async () => {
   // This will try to connect the page to MetaMask
   await provider.send('eth_requestAccounts', []);
   // Create a new connection to the Colony Network contracts using the MetaMask "wallet"
-  const colonyNetwork = new ColonyNetwork(provider.getSigner());
+  const colonyNetwork = await ColonyNetwork.init(provider.getSigner());
   // Connect to the MetaColony (this could be replaced with your own colony using `colonyNetwork.getColony(COLONY_ADDRESS)`)
   const metaColony = await colonyNetwork.getMetaColony();
   // Get the CLNY funding for the MetaColony (CLNY is it's native token)
