@@ -19,7 +19,7 @@
     "esbuild": "^0.17.8"
   },
   "dependencies": {
-    "@colony/sdk": "^1.3.0",
+    "@colony/sdk": "^1.3.2",
     "ethers": "^5.7.2"
   }
 }
