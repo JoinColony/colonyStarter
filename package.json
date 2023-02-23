@@ -1,11 +1,11 @@
 {
-  "name": "colonystarter",
+  "name": "discord-gating-bot-frontend",
   "version": "1.0.0",
-  "description": "A simple app around the Colony SDK",
-  "main": "dist/index.js",
+  "description": "The frontend for the infamouse discord-gating-bot",
+  "main": "dist/index.ts",
   "scripts": {
-    "serve": "esbuild --bundle src/index.js --servedir=src",
-    "build": "esbuild --bundle src/index.js --minify --outfile=dist/index.js && cpy --flat src/index.html dist"
+    "serve": "esbuild --bundle --outdir=www --servedir=www src/index.js",
+    "build": "esbuild --bundle src/index.ts --minify --outfile=dist/index.js && cpy --flat www/index.html dist"
   },
   "keywords": [
     "colony",
@@ -19,7 +19,7 @@
     "esbuild": "^0.17.8"
   },
   "dependencies": {
-    "@colony/sdk": "^1.3.2",
-    "ethers": "^5.7.2"
+    "ethers": "^5.7.2",
+    "@colony/sdk": "^1.3.2"
   }
 }
