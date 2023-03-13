@@ -5,7 +5,7 @@
   "main": "dist/index.ts",
   "scripts": {
     "serve": "esbuild --bundle --outdir=www --servedir=www src/index.js",
-    "build": "esbuild --bundle src/index.ts --minify --outfile=dist/index.js && cpy --flat www/index.html dist"
+    "build": "esbuild --bundle src/index.js --minify --outfile=dist/index.js && cpy --flat www/index.html dist"
   },
   "keywords": [
     "colony",
