@@ -1,10 +1,10 @@
 {
-  "name": "discord-gating-bot-frontend",
+  "name": "colony-starter",
   "version": "1.0.0",
-  "description": "The frontend for the infamouse discord-gating-bot",
+  "description": "A template to get started with Colony quickly",
   "main": "dist/index.ts",
   "scripts": {
-    "serve": "esbuild --bundle --outdir=www --servedir=www src/index.js",
+    "start": "esbuild --bundle --outdir=www --servedir=www src/index.js",
     "build": "esbuild --bundle src/index.js --minify --outfile=dist/index.js && cpy --flat www/index.html dist"
   },
   "keywords": [
@@ -19,7 +19,7 @@
     "esbuild": "^0.17.8"
   },
   "dependencies": {
-    "ethers": "^5.7.2",
-    "@colony/sdk": "^1.3.2"
+    "@colony/sdk": "^2.0.0-next.6",
+    "ethers": "^5.7.2"
   }
 }

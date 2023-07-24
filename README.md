@@ -1,8 +1,8 @@
-😎 A template project for ColonySDK
+😎 A template project for Colony SDK
 
 # Quickstart (for the impatient)
 
-1. Install [`nvm`](https://github.com/nvm-sh/nvm)
+1. Install [`nvm`](https://github.com/nvm-sh/nvm) or [`fnm`](https://github.com/Schniz/fnm)
 2. Click "Use this template" on this repository's GitHub repository (https://github.com/JoinColony/colonyStarter). See also [GitHub's HowTo](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 3. Clone your newly created repository
 ```bash
@@ -16,7 +16,7 @@ npm install
 ```
 5. To run the template's code in the browser:
 ```bash
-npm run serve
+npm start
 ```
 6. Or, to build the code into the `dist` directory:
 ```bash

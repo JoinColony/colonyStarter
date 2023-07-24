@@ -12,13 +12,13 @@ const start = async () => {
   // This will try to connect the page to MetaMask
   await provider.send('eth_requestAccounts', []);
   // Create a new connection to the Colony Network contracts using the MetaMask "wallet"
-  const colonyNetwork = await ColonyNetwork.init(provider.getSigner());
+  const colonyNetwork = new ColonyNetwork(provider.getSigner());
   // Connect to the MetaColony (this could be replaced with your own colony using `colonyNetwork.getColony(COLONY_ADDRESS)`)
   const metaColony = await colonyNetwork.getMetaColony();
   // Get the CLNY funding for the MetaColony (CLNY is it's native token)
   const funding = await metaColony.getBalance();
   // The funding will be in wei (x * 10^18), so we format into a readable string using ethers' formatUnits function
-  document.querySelector('#funding').innerHTML = formatUnits(funding) + ' CLNY';
+  document.querySelector('#funding').innerHTML = `MetaColony native token balance is ${formatUnits(funding)} CLNY`;
 };
 
 start();
